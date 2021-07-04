@@ -1,0 +1,90 @@
+.sidenav {
+  margin-top: 10px;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding-top: 20px;
+  margin-left: 30px;
+  position: fixed;
+  top: 50px;
+  bottom: 20px;
+  background-color: #fff;
+  height: 60vh;
+}
+.side-nav-links {
+  display: flex;
+  flex-direction: column;
+}
+.side-nav-links a {
+  padding-top: 10px;
+  text-align: left;
+}
+.gender-details {
+  padding-top: 10px;
+}
+.btn {
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  width: 70%;
+  padding: 0;
+}
+.gender {
+  padding-top: 10px;
+  display: flex;
+}
+.check {
+  border-radius: 5px;
+}
+.brand_name {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.brand_details {
+  padding-top: 10px;
+  display: flex;
+}
+input[type="checkbox"] {
+  display: none;
+}
+label {
+  position: relative;
+}
+label::before {
+  content: "";
+  background-image: url("tick.svg");
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  width: 18px;
+  height: 18px;
+  margin-right: 20px;
+  margin-top: 10px;
+  transform: scale(0) rotateZ(180deg);
+  transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
+}
+input[type="checkbox"]:checked + label::before {
+  transform: scale(1) rotateZ(0deg);
+}
+label::after {
+  content: "";
+  border: 2px solid rgb(15, 13, 13);
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 0px;
+  top: 0px;
+  border: 0.5px solid rgb(102, 101, 101);
+  border-radius: 2px;
+}
+@media only screen and (max-width: 768px) {
+  .sidenav {
+    display: none;
+  }
+}
