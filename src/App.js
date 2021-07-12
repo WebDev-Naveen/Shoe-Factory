@@ -13,11 +13,23 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Wishlist from "./components/Wishlist";
 import AddToCart from "./components/AddToCart";
-
-function App() {
+import { connect } from "react-redux";
+import { anotherName } from "./actions/myaction";
+import Checkout from "./components/Checkout";
+function App(props) {
+  console.log(props);
   return (
     <Router>
       <div className="App">
+        {/* <h1>i am app compenent</h1>
+      <p>my name is {props.myname}</p>
+      <button
+        onClick={() => {
+          props.changeName();
+        }}
+      >
+        change it
+      </button> */}
         <Header />
 
         <Switch>
@@ -27,6 +39,7 @@ function App() {
           <Route path="/register" component={Register} />
           <Route path="/wishlist" component={Wishlist} />
           <Route path="/Addtocart" component={AddToCart} />
+          <Route path="/checkout" component={Checkout} />
         </Switch>
 
         <Footer />
@@ -34,4 +47,17 @@ function App() {
     </Router>
   );
 }
+// const mapStateToProps = (state) => {
+//   return {
+//     myname: state.name,
+//   };
+// };
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     changeName: () => {
+//       dispatch(anotherName());
+//     },
+//   };
+// };
 export default App;
+// connect(mapStateToProps, mapDispatchToProps)(App);

@@ -1,19 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import queryString from "query-string";
 import "./sidenav.css";
 import expandmore from "./expandmore.png";
 import expandless from "./expandless.png";
-import {
-  BrowserRouter,
-  Link,
-  useLocation,
-  useHistory,
-  useParams,
-} from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 console.log(useParams);
-function SideNav({ filter, setFilter }) {
+function SideNav({ filter, setFilter, setCollectedKeys }) {
   const [expandgender, setExpandGender] = useState(true);
   const [expandbrand, setExpandBrand] = useState(true);
+
   let queryParameters = {};
   let filterValues = {};
   const history = useHistory();
@@ -51,6 +46,7 @@ function SideNav({ filter, setFilter }) {
   // console.log(searchProducts);
   // // console.log(Brand);
   // console.log(category);
+  console.log(filter);
   function handleCategory(e, categoryType) {
     let temp = { ...filter };
     if (categoryType === "category") {
@@ -63,6 +59,7 @@ function SideNav({ filter, setFilter }) {
     filterValues = { ...temp };
     setFilter(temp);
     filteredCollected();
+    // console.log(filter);
   }
 
   function filteredCollected() {
@@ -77,15 +74,25 @@ function SideNav({ filter, setFilter }) {
     for (let genderKey in gender) {
       if (gender[genderKey]) collectedTrueKeys.gender.push(genderKey);
     }
-    console.log(filterValues.category);
+    if (collectedTrueKeys) setCollectedKeys(collectedTrueKeys);
+    let filterCategory = "";
+    if (filterValues.category) {
+      filterCategory = filterValues.category;
 
-    queryParameters = {
-      ...queryParam,
-      category: filterValues.category,
-      brand: collectedTrueKeys.brand,
-      gender: collectedTrueKeys.gender,
-    };
-
+      queryParameters = {
+        ...queryParam,
+        category: filterCategory,
+        brand: collectedTrueKeys.brand,
+        gender: collectedTrueKeys.gender,
+      };
+    } else {
+      queryParameters = {
+        ...queryParam,
+        category: filterValues.category,
+        brand: collectedTrueKeys.brand,
+        gender: collectedTrueKeys.gender,
+      };
+    }
     history.push({
       path: "/filter",
       search: queryString.stringify(queryParameters),
@@ -181,8 +188,8 @@ function SideNav({ filter, setFilter }) {
               <input
                 type="checkbox"
                 id="men"
-                checked={filter.gender.men}
                 className="check"
+                checked={filter.gender["men"]}
                 name="men"
                 onChange={(e) => handleCategory(e, "gender")}
               />
@@ -193,7 +200,7 @@ function SideNav({ filter, setFilter }) {
                 type="checkbox"
                 className="check"
                 id="women"
-                checked={filter.gender.women}
+                checked={filter.gender["women"]}
                 name="women"
                 onChange={(e) => handleCategory(e, "gender")}
               />
@@ -204,8 +211,8 @@ function SideNav({ filter, setFilter }) {
                 type="checkbox"
                 className="check"
                 id="unisex"
-                checked={filter.gender.unisex}
                 name="unisex"
+                checked={filter.gender["unisex"]}
                 onChange={(e) => handleCategory(e, "gender")}
               />
               <label htmlFor="unisex">Unisex</label>

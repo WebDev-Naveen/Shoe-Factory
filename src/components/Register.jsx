@@ -1,21 +1,17 @@
 import React from "react";
-
+import "./register.css";
 function Register() {
   return (
-    <div style={{ width: "400px", height: "100vh" }}>
-      <form
-        style={{
-          width: "300px",
-          height: "50vh",
-          color: "black",
-          margin: "0 auto",
-          marginTop: "100px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+    <div className="main-reg-container">
+      <div className="reg-img">
+        <img
+          src="/images/Shoe-logo.jpg"
+          alt="Shoe-logo"
+          width="400"
+          height="400"
+        />
+      </div>
+      <form className="form-container">
         <input type="email" placeholder="Enter your Email-Id" name="email" />
         <input
           type="text"

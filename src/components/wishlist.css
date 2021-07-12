@@ -1,20 +1,49 @@
+* {
+  /* border: 1px solid black; */
+}
 .wish_list_container {
   margin: 0 auto;
   margin-top: 60px;
-  width: 80vw;
-  background-color: rgb(86, 153, 184);
+  width: 50vw;
+  border-radius: 20px;
+  background: hsla(238, 100%, 71%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(238, 100%, 71%, 1) 0%,
+    hsla(295, 100%, 84%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(238, 100%, 71%, 1) 0%,
+    hsla(295, 100%, 84%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(238, 100%, 71%, 1) 0%,
+    hsla(295, 100%, 84%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#696EFF", endColorstr="#F8ACFF", GradientType=1 );
+}
+.list_container {
+  display: flex;
+  flex-wrap: wrap;
 }
 .wish_list_items {
-  max-width: 200px;
+  max-width: 300px;
   margin: auto;
-
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 20px;
   background-color: #fff;
   border-radius: 8px;
   border: 1px solid rgba(20, 20, 20, 0.3);
 }
 .header_fav {
+  flex-basis: 1;
+  flex-grow: 1;
   height: 30px;
   padding-top: 10px;
   color: #fff;
@@ -23,9 +52,37 @@
   font-family: Arial, Helvetica, sans-serif;
   line-height: 16px;
   letter-spacing: 2px;
-  background-color: rgb(18, 116, 99);
+  border-radius: 40px;
+  background: hsla(191, 88%, 81%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(191, 88%, 81%, 1) 0%,
+    hsla(260, 72%, 82%, 1) 50%,
+    hsla(247, 73%, 69%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(191, 88%, 81%, 1) 0%,
+    hsla(260, 72%, 82%, 1) 50%,
+    hsla(247, 73%, 69%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(191, 88%, 81%, 1) 0%,
+    hsla(260, 72%, 82%, 1) 50%,
+    hsla(247, 73%, 69%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#A4E9F9", endColorstr="#C5AEF2", GradientType=1 );
 }
-@media only screen and (max-width: 768px) {
+.cart_btn {
+  height: 40px;
+  margin: 10px;
+}
+@media only screen and (max-width: 600px) {
   .wish_list_container {
     width: 300px;
     top: 70px;

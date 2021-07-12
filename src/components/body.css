@@ -1,24 +1,28 @@
 .main-container {
-  margin-left: 250px;
-  margin-top: 50px;
-  width: 80%;
+  margin-top: 60px;
+  width: 85%;
+  background-color: #f9f9f9;
 }
 .shoes_container {
-  justify-content: space-evenly;
+  margin-top: 10px;
+  /* justify-content: space-evenly; */
   display: flex;
   flex-wrap: wrap;
-  padding-left: 20px;
+  padding-left: 0px;
 }
 .shoes_details_container {
   padding: 15px 10px;
-  border-right: 1px solid rgba(40, 43, 46, 0.1);
+  margin: 10px;
+  border: 1px solid rgba(40, 43, 46, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .shoes_desc {
   display: flex;
   flex-direction: column;
 }
 .shoes_desc span {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 16px;
   word-spacing: 5px;
   letter-spacing: 2px;
@@ -42,7 +46,7 @@
   border-radius: 8px;
   background-color: #fff;
   border: 1px solid rgba(40, 43, 46, 0.1);
-  font: "Proxima Nova", Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   cursor: pointer;
 }
 .cart_btn:hover {
@@ -64,7 +68,7 @@
 .fav_btn img:hover {
   opacity: 0.5;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .main-container {
     font-size: 12px;
     width: 90%;

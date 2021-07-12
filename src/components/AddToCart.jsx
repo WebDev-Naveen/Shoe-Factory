@@ -4,87 +4,66 @@ function AddToCart() {
   return (
     <div className="main_cart_container">
       <div className="header_cart">AddToCart</div>
-      <div className="cart_container">
-        <div className="shoe_image">
-          <img
-            src={window.location.origin + "/images/Nike Running.jpg"}
-            alt="nike Running"
-            width="120"
-            height="120"
-          ></img>
+      <div className="container">
+        <div className="cart_container">
+          <div className="shoe_image">
+            <img
+              src={window.location.origin + "/images/Nike Running.jpg"}
+              alt="nike Running"
+              width="120"
+              height="120"
+            ></img>
+          </div>
+          <div className="cart_item_desc">
+            <span className="item name">Nike Running</span>
+            <span className="item brand">Men</span>
+            <span className="item price">Price</span>
+          </div>
+          <div className="cart_item_quantity">
+            <button className="qnt_btn">-</button>
+            <span className="quantity_val">1</span>
+            <button className="qnt_btn">+</button>
+          </div>
         </div>
-        <div className="cart_item_desc">
-          <span className="item name">Nike Running</span>
-          <span className="item brand">Men</span>
-          <span className="item price">Price</span>
+        <div className="cart_container">
+          <div className="shoe_image">
+            <img
+              src={window.location.origin + "/images/Nike Running.jpg"}
+              alt="nike Running"
+              width="120"
+              height="120"
+            ></img>
+          </div>
+          <div className="cart_item_desc">
+            <span className="item name">Nike Running</span>
+            <span className="item brand">Men</span>
+            <span className="item price">Price</span>
+          </div>
+          <div className="cart_item_quantity">
+            <button className="qnt_btn">-</button>
+            <span className="quantity_val">1</span>
+            <button className="qnt_btn">+</button>
+          </div>
         </div>
-        <div className="cart_item_quantity">
-          <button className="qnt_btn">-</button>
-          <input
-            style={{
-              width: "15px",
-
-              textAlign: "center",
-            }}
-            defaultValue="1"
-            placeholder="1"
-          />
-          <button className="qnt_btn">+</button>
-        </div>
-      </div>
-      <div className="cart_container">
-        <div className="shoe_image">
-          <img
-            src={window.location.origin + "/images/Nike Running.jpg"}
-            alt="nike Running"
-            width="120"
-            height="120"
-          ></img>
-        </div>
-        <div className="cart_item_desc">
-          <span className="item name">Nike Running</span>
-          <span className="item brand">Men</span>
-          <span className="item price">Price</span>
-        </div>
-        <div className="cart_item_quantity">
-          <button className="qnt_btn">-</button>
-          <input
-            style={{
-              width: "15px",
-              textAlign: "center",
-            }}
-            defaultValue="1"
-            placeholder="1"
-          />
-          <button className="qnt_btn">+</button>
-        </div>
-      </div>
-      <div className="cart_container">
-        <div className="shoe_image">
-          <img
-            src={window.location.origin + "/images/Nike Running.jpg"}
-            alt="nike Running"
-            width="120"
-            height="120"
-          ></img>
-        </div>
-        <div className="cart_item_desc">
-          <span className="item name">Nike Running</span>
-          <span className="item brand">Men</span>
-          <span className="item price">Price</span>
-        </div>
-        <div className="cart_item_quantity">
-          <button className="qnt_btn">-</button>
-          <input
-            style={{
-              width: "15px",
-
-              textAlign: "center",
-            }}
-            defaultValue="1"
-            placeholder="1"
-          />
-          <button className="qnt_btn">+</button>
+        <div className="cart_container">
+          <div className="shoe_image">
+            <img
+              src={window.location.origin + "/images/Nike Running.jpg"}
+              alt="nike Running"
+              width="120"
+              height="120"
+            ></img>
+          </div>
+          <div className="cart_item_desc">
+            <span className="item name">Nike Running</span>
+            <span className="item brand">Men</span>
+            <span className="item price">Price</span>
+          </div>
+          <div className="cart_item_quantity">
+            <button className="qnt_btn">-</button>
+            <span className="quantity_val">1</span>
+            <button className="qnt_btn">+</button>
+          </div>
         </div>
       </div>
       <div className="total_amount">

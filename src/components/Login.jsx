@@ -1,26 +1,13 @@
 import React from "react";
-
+import man from "./man.png";
+import "./login.css";
 function Login() {
   return (
-    <div
-      style={{
-        width: "400px",
-        height: "100vh",
-      }}
-    >
-      <form
-        style={{
-          width: "300px",
-          height: "50vh",
-          color: "black",
-          margin: "0 auto",
-          marginTop: "100px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+    <div className="main-log-container">
+      <form>
+        <div class="profile_container">
+          <img src={man} alt="Profile Picture" width="150" height="150" />
+        </div>
         <input type="text" placeholder="Enter your username" name="username" />
         <input
           type="password"

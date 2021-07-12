@@ -1,14 +1,19 @@
 .header {
   background-color: #ffffff;
   width: 100vw;
-  padding-top: 20px;
+  padding-top: 10px;
   display: flex;
   box-sizing: border-box;
+  text-align: center;
   height: 60px;
   border-bottom: 0.3px solid rgba(40, 43, 46, 0.1);
   position: fixed;
   top: 0;
   z-index: 1;
+}
+.logo{
+  cursor: pointer;
+  height: 50px;
 }
 
 .logo img {
@@ -17,17 +22,20 @@
   top: 5px;
 }
 .logo span {
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
   padding-left: 15px;
+  cursor: pointer;
 }
 .nav-bar {
   padding-left: 100px;
   display: flex;
   width: 60%;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 a {
   text-decoration: none;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -48,6 +56,7 @@ a:hover {
   width: 30%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .nav-icons img {
   margin-top: -5px;

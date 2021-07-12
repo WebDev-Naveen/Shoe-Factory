@@ -1,0 +1,67 @@
+.main-reg-container {
+  width: 80%;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #dddada;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 400px;
+  margin: 10px;
+  margin-top: 80px;
+  margin-left: 50px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.form-container {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 10px;
+  height: 100%;
+}
+
+.form-container input {
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #dddada;
+  border-radius: 5px;
+  width: 30vw;
+  padding-left: 10px;
+  height: 40px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form-container button {
+  border-radius: 5px;
+  background-color: #308e82;
+  margin-bottom: 10px;
+  color: #fff;
+  border: none;
+  letter-spacing: 1.5px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.reg-img {
+  width: 100%;
+  border: 1px solid #fff;
+}
+
+.reg-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+/*# sourceMappingURL=register.css.map */
