@@ -1,10 +1,19 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./addtocart.css";
 import CartItems from "./CartItems";
 function AddToCart() {
+  const history = useHistory();
   const cartItems = useSelector((state) => state.reducer.cart);
   console.log(cartItems);
+  let total = 0;
+  cartItems.map((cartItem) => {
+    let price = cartItem.price.split("$");
+    price = Number(price[1]);
+    total += price * cartItem.qty;
+    return total;
+  });
 
   return (
     <div className="main_cart_container">
@@ -35,9 +44,11 @@ function AddToCart() {
             color: "#fff",
           }}
         >
-          $2500.00
+          ${total || 0}
         </span>
         <button
+          disabled={!cartItems}
+          onClick={() => history.push("/checkout")}
           style={{
             border: "none",
             outline: "none",

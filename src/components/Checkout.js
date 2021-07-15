@@ -1,6 +1,18 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "./checkout.css";
+import OrderSummary from "./OrderSummary";
 function Checkout() {
+  const cartItems = useSelector((state) => state.reducer.cart);
+  console.log(cartItems);
+  let total = 0;
+  cartItems.map((cartItem) => {
+    let price = cartItem.price.split("$");
+    price = Number(price[1]);
+    total += price * cartItem.qty;
+    return total;
+  });
+
   return (
     <section className="checkout_section">
       <div className="payment_details">
@@ -28,29 +40,11 @@ function Checkout() {
         <button className="paynow">Pay Now</button>
       </div>
       <div className="order_summary_container">
-        <div className="order_summary">
-          <div className="order_detail">
-            <div className="order_img_container">
-              <img
-                src="/images/Adidas Yezzy 350.jpg"
-                alt="Adidas Yezzy"
-                width="100"
-                height="100"
-              />
-            </div>
-            <div className="product_detail">
-              <div className="order_name">hello</div>
-              <div className="order_quantity">
-                <span className="action">+</span>
-                <span>1</span>
-                <span className="action">-</span>
-                <span>x</span>
-                <span>$7.55</span>
-              </div>
-            </div>
-            <span>X</span>
-          </div>
-        </div>
+        {cartItems &&
+          cartItems.map((item) => {
+            return <OrderSummary item={item} />;
+          })}
+
         <div className="coupen_code">
           <p>Apply Coupen Code</p>
           <div className="coupen_code_area">
@@ -61,19 +55,19 @@ function Checkout() {
         <div className="total_amount">
           <div className="subtotal amount">
             <p>Subtotal</p>
-            <span>$125</span>
+            <span>${total || 0}</span>
           </div>
           <div className="tax amount">
             <p>Tax</p>
-            <span>$0</span>
+            <span>${total % 10}</span>
           </div>
           <div className="shipping amount">
             <p>Shipping</p>
-            <span>$5</span>
+            <span>${total % 5}</span>
           </div>
           <div className="Total amount">
             <p>Total</p>
-            <span>$130</span>
+            <span>${total}</span>
           </div>
         </div>
       </div>
