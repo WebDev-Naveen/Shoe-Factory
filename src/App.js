@@ -13,8 +13,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Wishlist from "./components/Wishlist";
 import AddToCart from "./components/AddToCart";
-import { connect } from "react-redux";
-import { anotherName } from "./actions/myaction";
+
 import Checkout from "./components/Checkout";
 function App(props) {
   console.log(props);

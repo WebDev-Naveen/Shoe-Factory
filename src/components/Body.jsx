@@ -35,7 +35,7 @@ function Body({ filter: search, products, collectedKeys }) {
     <section className="main-container">
       <div className="shoes_container">
         {filprod.map((shoe) => {
-          return <Card shoe={shoe} />;
+          return <Card key={shoe.id} shoe={shoe} />;
         })}
       </div>
     </section>

@@ -3,7 +3,7 @@
 } */
 .main_cart_container {
   width: 80vw;
-  height: 390px;
+  min-height: 390px;
   margin: auto;
   margin-top: 60px;
   display: flex;
@@ -51,6 +51,8 @@
 .cart_item_desc {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  width: 100px;
 }
 .header_cart {
   width: 100%;

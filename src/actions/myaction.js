@@ -1,9 +1,20 @@
-export const anotherName = (name) => {
-  return (dispatch) => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((res) => res.json())
-      .then((response) => {
-        dispatch({ type: "CHANGE_NAME", payload: response[0].name });
-      });
-  };
-};
+export const addToCart = (cartItems) => ({
+  type: "ADDTOCART",
+  payload: cartItems,
+});
+export const increment = (Items) => ({
+  type: "INCREMENT",
+  payload: Items,
+});
+export const decrement = (Items) => ({
+  type: "DECREMENT",
+  payload: Items,
+});
+export const addToFavourite = (productId) => ({
+  type: "ADDTOFAV",
+  payload: productId,
+});
+export const removeFavourite = (productId) => ({
+  type: "REMOVEFAV",
+  payload: productId,
+});

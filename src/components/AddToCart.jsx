@@ -1,70 +1,19 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "./addtocart.css";
+import CartItems from "./CartItems";
 function AddToCart() {
+  const cartItems = useSelector((state) => state.reducer.cart);
+  console.log(cartItems);
+
   return (
     <div className="main_cart_container">
       <div className="header_cart">AddToCart</div>
       <div className="container">
-        <div className="cart_container">
-          <div className="shoe_image">
-            <img
-              src={window.location.origin + "/images/Nike Running.jpg"}
-              alt="nike Running"
-              width="120"
-              height="120"
-            ></img>
-          </div>
-          <div className="cart_item_desc">
-            <span className="item name">Nike Running</span>
-            <span className="item brand">Men</span>
-            <span className="item price">Price</span>
-          </div>
-          <div className="cart_item_quantity">
-            <button className="qnt_btn">-</button>
-            <span className="quantity_val">1</span>
-            <button className="qnt_btn">+</button>
-          </div>
-        </div>
-        <div className="cart_container">
-          <div className="shoe_image">
-            <img
-              src={window.location.origin + "/images/Nike Running.jpg"}
-              alt="nike Running"
-              width="120"
-              height="120"
-            ></img>
-          </div>
-          <div className="cart_item_desc">
-            <span className="item name">Nike Running</span>
-            <span className="item brand">Men</span>
-            <span className="item price">Price</span>
-          </div>
-          <div className="cart_item_quantity">
-            <button className="qnt_btn">-</button>
-            <span className="quantity_val">1</span>
-            <button className="qnt_btn">+</button>
-          </div>
-        </div>
-        <div className="cart_container">
-          <div className="shoe_image">
-            <img
-              src={window.location.origin + "/images/Nike Running.jpg"}
-              alt="nike Running"
-              width="120"
-              height="120"
-            ></img>
-          </div>
-          <div className="cart_item_desc">
-            <span className="item name">Nike Running</span>
-            <span className="item brand">Men</span>
-            <span className="item price">Price</span>
-          </div>
-          <div className="cart_item_quantity">
-            <button className="qnt_btn">-</button>
-            <span className="quantity_val">1</span>
-            <button className="qnt_btn">+</button>
-          </div>
-        </div>
+        {cartItems &&
+          cartItems.map((cartItem) => {
+            return <CartItems key={cartItem.id} cartItem={cartItem} />;
+          })}
       </div>
       <div className="total_amount">
         <span
@@ -105,4 +54,5 @@ function AddToCart() {
     </div>
   );
 }
+
 export default AddToCart;

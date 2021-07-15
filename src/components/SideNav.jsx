@@ -88,7 +88,7 @@ function SideNav({ filter, setFilter, setCollectedKeys }) {
     } else {
       queryParameters = {
         ...queryParam,
-        category: filterValues.category,
+
         brand: collectedTrueKeys.brand,
         gender: collectedTrueKeys.gender,
       };
