@@ -6,7 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import queryString from "query-string";
-import Header from "./components/header/Header";
+import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 import Login from "./components/Login";

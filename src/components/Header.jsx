@@ -3,17 +3,14 @@ import Nav from "./Nav";
 import "./header.css";
 import shoelogo from "./shoelogo.png";
 import { Link } from "react-router-dom";
-import listicon from "../filter.png";
-import close from "../close.png";
+import listicon from "./filter.png";
+import close from "./close.png";
 import { useState } from "react";
-import { list } from "C:/Users/Naveen Singh/Desktop/React-Projects/e-commerce/src/actions/myaction";
+import { list } from "../actions/myaction";
 import { useDispatch } from "react-redux";
-import { useMediaQuery } from "react-responsive";
-function Header(props) {
+
+function Header() {
   const dispatch = useDispatch();
-  const isDesktopOrLaptop = useMediaQuery({
-    query: "(max-width: 600px)",
-  });
 
   const [btnTrigger, setTrigger] = useState(false);
   function handleClick() {

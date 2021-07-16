@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 
-import wishlist from "./header/Heart.svg";
+import wishlist from "./Heart.svg";
 import {
   addToCart,
   addToFavourite,

@@ -90,7 +90,7 @@ a:hover {
 @media only screen and (max-width: 600px) {
   .header {
     justify-content: space-between;
-    width: 95vw;
+    width: 90vw;
   }
 
   .logo span {
@@ -131,7 +131,7 @@ a:hover {
     flex-direction: column;
   }
   .logo img {
-    padding-left: 10px;
+    padding-left: 15px;
   }
   .logo span {
     padding-left: 5px;
