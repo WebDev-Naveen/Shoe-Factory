@@ -7,13 +7,13 @@
   padding-top: 20px;
   margin-left: 30px;
   position: sticky;
-  position:-webkit-sticky;
+  position: -webkit-sticky;
   top: 60px;
- 
+
   background-color: #fff;
   height: 90vh;
   /* max-height: 100vh; */
- /* margin-bottom: 500px; */
+  /* margin-bottom: 500px; */
   z-index: 0;
 }
 .side-nav-links {
@@ -21,14 +21,14 @@
   flex-direction: column;
 }
 .side-nav-links button {
-  border:none;
+  border: none;
   border-radius: 40px;
-  background-color:white;
+  background-color: white;
   font-size: 15px;
   padding: 10px;
   text-align: left;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 2px;
 }
 .gender-details {
@@ -94,8 +94,34 @@ label::after {
   border: 0.5px solid rgb(102, 101, 101);
   border-radius: 2px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 850px) {
   .sidenav {
-    display: none;
+    width: 20%;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .sidenav {
+    margin-left: 10px;
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .sidenav {
+    width: 60%;
+    /* display: none; */
+    position: fixed;
+    top: 240px;
+    left: 190px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    padding-bottom: 10px;
+    z-index: 1;
+    height: 160px;
+    overflow: auto;
+    border-bottom-left-radius: 5px;
   }
 }

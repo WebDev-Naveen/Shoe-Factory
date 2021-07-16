@@ -29,24 +29,25 @@ function Favourite({ product }) {
   return (
     <>
       <div className="wish_list_items">
-        <div className="shoes_details_container">
-          <div className="shoes_details">
+        <div className="shoess_details_container">
+          <div className="shoess_details">
             <img
+              className="shoe_img_1"
               src={window.location.origin + `/images/${product.imgSrc}`}
               alt="Nike"
               width="100"
               height="100"
             />
           </div>
-          <div className="shoes_desc">
+          <div className="shoess_desc">
             <span className="name ">{product.name}</span>
 
-            <span className="gender desc">Unisex</span>
-            <span className="brand desc">Nike</span>
-            <div className="addtocart">
-              <span className="price desc">{product.price}</span>
+            <span className="gender_1 desc">Unisex</span>
+            <span className="brand_1 desc">Nike</span>
+            <div className="addtocart_1">
+              <span className="price_1 desc">{product.Price}</span>
               <button
-                className="cart_btn"
+                className="cart_btn_1"
                 disabled={data}
                 onClick={handleClick}
               >

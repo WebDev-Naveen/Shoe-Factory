@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
+import { useHistory } from "react-router";
 import "./checkout.css";
 import OrderSummary from "./OrderSummary";
 function Checkout() {
+  const history = useHistory();
   const cartItems = useSelector((state) => state.reducer.cart);
   console.log(cartItems);
   let total = 0;
@@ -12,7 +14,14 @@ function Checkout() {
     total += price * cartItem.qty;
     return total;
   });
-
+  useEffect(() => {
+    if (cartItems.length === 0) {
+      history.push(
+        "/",
+        "sorry as there is no item in cart So we redirect you to the home page"
+      );
+    }
+  }, [cartItems, history]);
   return (
     <section className="checkout_section">
       <div className="payment_details">

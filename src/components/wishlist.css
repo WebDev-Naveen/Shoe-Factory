@@ -5,6 +5,7 @@
   margin: 0 auto;
   margin-top: 60px;
   width: 50vw;
+  min-height: 400px;
   border-radius: 20px;
   background: hsla(238, 100%, 71%, 1);
 
@@ -33,7 +34,7 @@
   flex-wrap: wrap;
 }
 .wish_list_items {
-  max-width: 300px;
+  max-width: 200px;
   margin: auto;
   margin-top: 40px;
   margin-bottom: 20px;
@@ -78,16 +79,44 @@
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#A4E9F9", endColorstr="#C5AEF2", GradientType=1 );
 }
-.cart_btn {
+.cart_btn_1 {
+  width: 50%;
   height: 40px;
   margin: 10px;
 }
+.shoess_desc {
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.addtocart_1 {
+  display: flex;
+  justify-content: space-between;
+}
+.price_1 {
+  width: 50px;
+  height: 50px;
+  color: black;
+  opacity: 1;
+}
+.cart_btn_1 {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.shoe_img_1 {
+  padding: 20px;
+  width: 60%;
+  height: 150px;
+}
+/* }
 @media only screen and (max-width: 600px) {
   .wish_list_container {
     width: 300px;
     top: 70px;
     right: 10px;
-    height: 40vh;
+    min-height: 620px;
   }
   .wish_list_items {
     height: 30vh;
@@ -96,7 +125,7 @@
     width: 75px;
     height: 75px;
   }
-  .shoes_desc {
+  .shoess_desc {
     font-size: 12px;
   }
-}
+} */

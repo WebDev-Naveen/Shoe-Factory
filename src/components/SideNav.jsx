@@ -111,10 +111,6 @@ function SideNav({ filter, setFilter, setCollectedKeys }) {
     <nav className="sidenav">
       <div className="side-nav-links">
         <button
-          // to={{
-          //   pathname: "",
-          //   search: queryString.stringify(query),
-          // }}
           style={{
             backgroundColor: filter.category === "running" ? "#39A2DB" : null,
           }}
@@ -126,10 +122,6 @@ function SideNav({ filter, setFilter, setCollectedKeys }) {
         </button>
 
         <button
-          // to={{
-          //   pathname: "",
-          //   search: queryString.stringify(query),
-          // }}
           style={{
             backgroundColor:
               filter.category === "basketball" ? "#39A2DB" : null,
@@ -142,10 +134,6 @@ function SideNav({ filter, setFilter, setCollectedKeys }) {
         </button>
 
         <button
-          // to={{
-          //   pathname: "",
-          //   search: queryString.stringify(query),
-          // }}
           style={{
             backgroundColor: filter.category === "gym" ? "#39A2DB" : null,
           }}
@@ -156,10 +144,6 @@ function SideNav({ filter, setFilter, setCollectedKeys }) {
           Gym
         </button>
         <button
-          // to={{
-          //   pathname: "",
-          //   search: queryString.stringify(query),
-          // }}
           style={{
             backgroundColor: filter.category === "football" ? "#39A2DB" : null,
           }}

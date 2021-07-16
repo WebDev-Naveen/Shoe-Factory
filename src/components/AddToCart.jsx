@@ -47,7 +47,7 @@ function AddToCart() {
           ${total || 0}
         </span>
         <button
-          disabled={!cartItems}
+          disabled={cartItems.length === 0}
           onClick={() => history.push("/checkout")}
           style={{
             border: "none",

@@ -108,3 +108,15 @@
     width: 300px;
   }
 }
+@media only screen and (max-width: 600px) {
+  .main_cart_container {
+    width: 90%;
+    min-height: 620px;
+  }
+  .cart_container {
+    width: 100%;
+  }
+  .cart_item_desc {
+    width: 60px;
+  }
+}

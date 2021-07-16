@@ -1,7 +1,7 @@
 import React from "react";
 import wishlist from "./wishlist.png";
 import shoppingCart from "./shopping-cart.png";
-import listicon from "../filter.png";
+
 import { Link } from "react-router-dom";
 function Nav(props) {
   return (
@@ -39,15 +39,6 @@ function Nav(props) {
             />
           </a>
         </Link>
-        <button className="filter_btn">
-          <img
-            src={listicon}
-            alt="list"
-            title="Filter"
-            width="40"
-            height="45"
-          />
-        </button>
       </div>
     </nav>
   );

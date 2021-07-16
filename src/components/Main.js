@@ -5,6 +5,9 @@ import Body from "./Body";
 import { useSelector } from "react-redux";
 
 function Main(props) {
+  // if (props.location.state) {
+  //   alert(props.location.state);
+  // }
   const products = useSelector((state) => state.wishreducer);
   console.log(products);
   const [filter, setFilter] = useState({

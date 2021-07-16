@@ -68,6 +68,31 @@
 .fav_btn img:hover {
   opacity: 0.5;
 }
+@media only screen and (max-width: 1248px) {
+  .shoes_container {
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .main-container {
+    width: 75%;
+  }
+  .shoes_container {
+    width: 100%;
+  }
+  .shoes_details_container {
+    width: 40%;
+  }
+  .shoes_details img {
+    width: 99%;
+    height: 250px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .cart_btn {
+    font-size: 12px;
+  }
+}
 @media only screen and (max-width: 600px) {
   .main-container {
     font-size: 12px;
@@ -75,16 +100,24 @@
     margin-left: 30px;
   }
   .shoes_container {
-    width: 90%;
-    padding-left: 0px;
+    width: 95%;
+  }
+  .shoes_details_container {
+    width: 40%;
   }
   .shoes_details img {
-    width: 150px;
-    height: 150px;
+    width: 90% !important;
+    height: 150px !important;
+  }
+  .shoes_desc {
+    margin-left: 10px;
+    width: 90%;
+    /* justify-content: center; */
+    align-items: right;
   }
   .cart_btn {
-    width: 100px;
-    height: 30px;
+    margin: 0 !important;
+    height: 50px !important;
     font-size: 11px;
     background-color: #454545;
     color: #fff;
@@ -98,20 +131,12 @@
     padding-left: 1px;
     padding-right: 2px;
   }
-  #id_5 {
-    width: 134px;
-  }
-  #id_7 {
-    width: 130px;
-  }
-  #id_8 {
-    width: 130px;
-  }
+
   .shoes_details {
     text-align: center;
   }
-  .addtocart:hover {
-    background-color: #454545;
-    color: #fff;
+
+  .name_wish {
+    height: 50px;
   }
 }
