@@ -1,13 +1,21 @@
 import React from "react";
 import wishlist from "./wishlist.png";
 import shoppingCart from "./shopping-cart.png";
-
+import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-function Nav(props) {
+function Nav() {
   const listVal = useSelector((state) => state.listreducer);
+  const isDesktopOrLaptop = useMediaQuery({
+    query: "(max-width: 600px)",
+  });
+  let style = {};
+  if (isDesktopOrLaptop) {
+    style = { display: listVal ? "none" : "flex" };
+  }
+  console.log(isDesktopOrLaptop);
   return (
-    <nav className="nav-bar" style={{ display: listVal ? "none" : "flex" }}>
+    <nav className="nav-bar" style={style}>
       <div className="nav-links">
         <Link to="/register">
           <a href=""> Register </a>

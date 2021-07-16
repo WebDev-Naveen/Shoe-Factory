@@ -5,10 +5,19 @@ import expandmore from "./expandmore.png";
 import expandless from "./expandless.png";
 import { useHistory, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { useMediaQuery } from "react-responsive";
 console.log(useParams);
 function SideNav({ filter, setFilter, setCollectedKeys }) {
   const listVal = useSelector((state) => state.listreducer);
   console.log(listVal);
+  const isDesktopOrLaptop = useMediaQuery({
+    query: "(max-width: 600px)",
+  });
+  let style = {};
+  if (isDesktopOrLaptop) {
+    style = { display: listVal ? "none" : "flex" };
+  }
+
   const [expandgender, setExpandGender] = useState(true);
   const [expandbrand, setExpandBrand] = useState(true);
 
@@ -17,38 +26,6 @@ function SideNav({ filter, setFilter, setCollectedKeys }) {
   const history = useHistory();
 
   const queryParam = queryString.parse(window.location.search);
-
-  // const multiPropsFilter = (products, filters) => {
-  //   const filterKeys = Object.keys(filters);
-  //   return products.filter((product) => {
-  //     return filterKeys.every((key) => {
-  //       if (!filters[key].length) return true;
-  //       // Loops again if product[key] is an array (for material attribute).
-  //       if (Array.isArray(product[key])) {
-  //         return product[key].some((keyEle) => filters[key].includes(keyEle));
-  //       }
-  //       return filters[key].includes(product[key]);
-  //     });
-  //   });
-  // };
-  // console.log(multiPropsFilter());
-
-  // const searchProducts = () => {
-  //   const filteredProducts = multiPropsFilter(
-  //     props.products,
-  //     filteredCollected()
-  //   );
-  //   console.log(filteredProducts);
-  //   const filprod = filteredProducts.filter((product) => {
-  //     return product.name.toLowerCase().includes(filter.category);
-  //   });
-  //   console.log(filprod);
-  // };
-  // searchProducts();
-  // props.handleProducts(searchProducts);
-  // console.log(searchProducts);
-  // // console.log(Brand);
-  // console.log(category);
   console.log(filter);
   function handleCategory(e, categoryType) {
     let temp = { ...filter };
@@ -111,7 +88,7 @@ function SideNav({ filter, setFilter, setCollectedKeys }) {
 
   //yaha jitne bhi link h unme ek filter object bna ke route krwa
   return (
-    <nav className="sidenav" style={{ display: listVal ? "none" : "flex" }}>
+    <nav className="sidenav" style={style}>
       <div className="side-nav-links">
         <button
           style={{

@@ -8,12 +8,17 @@ import close from "../close.png";
 import { useState } from "react";
 import { list } from "C:/Users/Naveen Singh/Desktop/React-Projects/e-commerce/src/actions/myaction";
 import { useDispatch } from "react-redux";
+import { useMediaQuery } from "react-responsive";
 function Header(props) {
   const dispatch = useDispatch();
+  const isDesktopOrLaptop = useMediaQuery({
+    query: "(max-width: 600px)",
+  });
+
   const [btnTrigger, setTrigger] = useState(false);
   function handleClick() {
-    setTrigger(!btnTrigger);
     dispatch(list(btnTrigger));
+    setTrigger(!btnTrigger);
   }
   return (
     <header className="header">
