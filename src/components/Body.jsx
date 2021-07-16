@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./body.css";
-
 import queryString from "query-string";
 import Card from "./Card";
 

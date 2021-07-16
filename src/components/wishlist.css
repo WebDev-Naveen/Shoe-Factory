@@ -110,22 +110,9 @@
   width: 60%;
   height: 150px;
 }
-/* }
 @media only screen and (max-width: 600px) {
   .wish_list_container {
-    width: 300px;
-    top: 70px;
-    right: 10px;
+    width: 100%;
     min-height: 620px;
   }
-  .wish_list_items {
-    height: 30vh;
-  }
-  .shoes_details img {
-    width: 75px;
-    height: 75px;
-  }
-  .shoess_desc {
-    font-size: 12px;
-  }
-} */
+}

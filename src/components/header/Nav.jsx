@@ -3,9 +3,11 @@ import wishlist from "./wishlist.png";
 import shoppingCart from "./shopping-cart.png";
 
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 function Nav(props) {
+  const listVal = useSelector((state) => state.listreducer);
   return (
-    <nav className="nav-bar">
+    <nav className="nav-bar" style={{ display: listVal ? "none" : "flex" }}>
       <div className="nav-links">
         <Link to="/register">
           <a href=""> Register </a>

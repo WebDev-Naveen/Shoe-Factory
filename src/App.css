@@ -3,7 +3,7 @@
   width: 100%;
   text-align: center;
   margin-top: 10px;
-  height: 20vh;
+  height: 10vh;
   min-height: 100px;
   background-color: black;
 }
@@ -33,6 +33,6 @@
     margin-left: 10px;
   }
   .footer {
-    height: 15vh;
+    height: 10vh;
   }
 }

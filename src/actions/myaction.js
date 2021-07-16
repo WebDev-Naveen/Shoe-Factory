@@ -18,3 +18,7 @@ export const removeFavourite = (productId) => ({
   type: "REMOVEFAV",
   payload: productId,
 });
+export const list = (listVal) => ({
+  type: "LIST",
+  payload: listVal,
+});

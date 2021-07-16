@@ -1,15 +1,11 @@
 import React from "react";
 import "./register.css";
+import man from "./man.png";
 function Register() {
   return (
     <div className="main-reg-container">
       <div className="reg-img">
-        <img
-          src="/images/Shoe-logo.jpg"
-          alt="Shoe-logo"
-          width="400"
-          height="400"
-        />
+        <img src={man} alt="Shoe-logo" width="150" height="150" />
       </div>
       <form className="form-container">
         <input type="email" placeholder="Enter your Email-Id" name="email" />

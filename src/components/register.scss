@@ -4,35 +4,36 @@
 }
 
 .main-reg-container {
-  width: 80%;
+  margin: 0 auto;
+  width: 80vw;
+  display: flex;
   @include prop();
-  display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 5px;
-  align-items: center;
+  // height: 81vh;
+  flex-direction: column;
   justify-content: center;
-  height: 400px;
-  margin: 10px;
+  align-items: center;
+  // margin: 10px;
   margin-top: 80px;
-  margin-left: 50px;
-
+  // margin-left: 50px;
+  margin-bottom: 100px;
   border-radius: 20px;
-  padding: 10px;
 }
 .form-container {
   display: grid;
-  row-gap: 10px;
-  height: 100%;
+  row-gap: 20px;
+  width: 30%;
 
   input {
     @include prop();
     border-radius: 5px;
-    width: 30vw;
+    width: 90%;
     padding-left: 10px;
     height: 40px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
   button {
+    width: 94%;
+    height: 50px;
     border-radius: 5px;
     background-color: #308e82;
     margin-bottom: 10px;
@@ -43,12 +44,15 @@
   }
 }
 .reg-img {
-  width: 100%;
-  border: 1px solid #fff;
-
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
   img {
-    object-fit: cover;
-    object-position: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .form-container {
+    width: 80%;
   }
 }

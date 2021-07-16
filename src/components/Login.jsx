@@ -6,7 +6,7 @@ function Login() {
     <div className="main-log-container">
       <form>
         <div class="profile_container">
-          <img src={man} alt="Profile Picture" width="150" height="150" />
+          <img src={man} alt="ProfilePicture" width="150" height="150" />
         </div>
         <input type="text" placeholder="Enter your username" name="username" />
         <input

@@ -140,3 +140,12 @@
     height: 50px;
   }
 }
+@media only screen and (max-width: 300px) {
+  .main-container {
+    width: 100%;
+    margin-left: 10px;
+  }
+  .shoes_container {
+    width: 100%;
+  }
+}

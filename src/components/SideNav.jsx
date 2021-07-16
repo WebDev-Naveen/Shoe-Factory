@@ -4,8 +4,11 @@ import "./sidenav.css";
 import expandmore from "./expandmore.png";
 import expandless from "./expandless.png";
 import { useHistory, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 console.log(useParams);
 function SideNav({ filter, setFilter, setCollectedKeys }) {
+  const listVal = useSelector((state) => state.listreducer);
+  console.log(listVal);
   const [expandgender, setExpandGender] = useState(true);
   const [expandbrand, setExpandBrand] = useState(true);
 
@@ -108,7 +111,7 @@ function SideNav({ filter, setFilter, setCollectedKeys }) {
 
   //yaha jitne bhi link h unme ek filter object bna ke route krwa
   return (
-    <nav className="sidenav">
+    <nav className="sidenav" style={{ display: listVal ? "none" : "flex" }}>
       <div className="side-nav-links">
         <button
           style={{

@@ -1,39 +1,38 @@
 .main-reg-container {
-  width: 80%;
+  margin: 0 auto;
+  width: 80vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-family: "Poppins", sans-serif;
   border: 1px solid #dddada;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  -webkit-column-gap: 5px;
-          column-gap: 5px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 400px;
-  margin: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 80px;
-  margin-left: 50px;
+  margin-bottom: 100px;
   border-radius: 20px;
-  padding: 10px;
 }
 
 .form-container {
   display: -ms-grid;
   display: grid;
-  row-gap: 10px;
-  height: 100%;
+  row-gap: 20px;
+  width: 30%;
 }
 
 .form-container input {
   font-family: "Poppins", sans-serif;
   border: 1px solid #dddada;
   border-radius: 5px;
-  width: 30vw;
+  width: 90%;
   padding-left: 10px;
   height: 40px;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -41,6 +40,8 @@
 }
 
 .form-container button {
+  width: 94%;
+  height: 50px;
   border-radius: 5px;
   background-color: #308e82;
   margin-bottom: 10px;
@@ -52,16 +53,23 @@
 }
 
 .reg-img {
-  width: 100%;
-  border: 1px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
 }
 
 .reg-img img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 600px) {
+  .form-container {
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=register.css.map */

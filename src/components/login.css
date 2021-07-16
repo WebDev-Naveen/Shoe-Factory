@@ -1,7 +1,7 @@
 .main-log-container {
   margin-top: 100px;
   width: 100%;
-  height: 352px;
+  height: 72.5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,6 +36,12 @@
   border: 1px solid #dddada;
   border-radius: 5px;
   padding: 10px;
+}
+
+@media only screen and (max-width: 768) {
+  .main-log-container form {
+    width: 50%;
+  }
 }
 
 .profile_container {

@@ -88,10 +88,11 @@ a:hover {
   }
 }
 @media only screen and (max-width: 600px) {
-  .logo {
-    width: 100%;
-    margin-left: 20px;
+  .header {
+    justify-content: space-between;
+    width: 95vw;
   }
+
   .logo span {
     font-size: 14px;
   }
@@ -117,10 +118,13 @@ a:hover {
     font-size: 18px;
   }
   .nav-bar {
+    display: none;
+    width: 50%;
+    padding-left: 0;
     background-color: #fff;
     position: absolute;
-    top: 60px;
-    left: 200px;
+    top: 55px;
+    left: 50%;
     z-index: 1;
     /* display: none; */
 
@@ -136,6 +140,6 @@ a:hover {
   .filter_btn {
     display: block !important;
     width: 30px;
-    margin-left: 300px;
+    /* margin-left: 300px; */
   }
 }
