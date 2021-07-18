@@ -1,11 +1,12 @@
 $fontFamliy: "Poppins", sans-serif;
 .main-log-container {
-  margin-top: 100px;
+  margin-top: 20px;
   width: 100%;
   height: 72.5vh;
   display: flex;
   justify-content: center;
-
+  align-items: center;
+  margin-bottom: 170px;
   form {
     display: grid;
 
