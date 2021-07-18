@@ -19,10 +19,13 @@ function AddToCart() {
     <div className="main_cart_container">
       <div className="header_cart">AddToCart</div>
       <div className="container">
-        {cartItems &&
+        {cartItems.length === 0 ? (
+          <p>There is no item in cart, Go to home and add item to cart</p>
+        ) : (
           cartItems.map((cartItem) => {
             return <CartItems key={cartItem.id} cartItem={cartItem} />;
-          })}
+          })
+        )}
       </div>
       <div className="total_amount">
         <span

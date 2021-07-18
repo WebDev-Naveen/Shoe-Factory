@@ -53,6 +53,7 @@ a:hover {
   margin-top: 0;
 }
 .nav-icons {
+  position: relative;
   width: 30%;
   display: flex;
   justify-content: space-around;
@@ -67,6 +68,21 @@ a:hover {
   background-color: #ffffff;
   margin-top: -5px;
   display: none;
+}
+.values {
+  position: absolute;
+  width: 20px;
+
+  bottom: 35px;
+  height: 18px;
+
+  border-radius: 9px;
+  background-color: black;
+
+  color: white;
+  font-size: 10px;
+  padding-bottom: 3px;
+  visibility: hidden;
 }
 @media only screen and (max-width: 768px) {
   .nav-bar {
@@ -89,24 +105,17 @@ a:hover {
 }
 @media only screen and (max-width: 600px) {
   .header {
-    justify-content: space-between;
-    width: 90vw;
+    justify-content: space-around;
+    width: 100vw;
+  }
+  .logo {
+    width: 100%;
   }
 
   .logo span {
-    font-size: 14px;
+    font-size: 12px;
   }
-  .nav-links {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-  }
-  .nav-icons {
-    flex-direction: column;
-    width: 45%;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
+
   .nav-icons img {
     margin-top: 0px;
     width: 26px;
@@ -115,20 +124,12 @@ a:hover {
 
   .nav-bar a {
     padding: 10px;
-    font-size: 18px;
+    font-size: 12px;
   }
   .nav-bar {
-    display: none;
-    width: 50%;
+    width: 60%;
     padding-left: 0;
     background-color: #fff;
-    position: absolute;
-    top: 55px;
-    left: 50%;
-    z-index: 1;
-    /* display: none; */
-
-    flex-direction: column;
   }
   .logo img {
     padding-left: 15px;
@@ -139,7 +140,37 @@ a:hover {
 
   .filter_btn {
     display: block !important;
-    width: 30px;
-    /* margin-left: 300px; */
+    /* width: 20px; */
+    width: 10%;
+
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .header {
+    justify-content: space-evenly;
+    width: 100vw;
+  }
+  .logo span {
+    display: none;
+  }
+  .logo img {
+    padding-top: 5px;
+
+    padding-left: 0;
+    width: 40px;
+    height: 30px;
+  }
+  .logo {
+    padding-left: 15px;
+  }
+  .nav-bar {
+    width: 70%;
+  }
+  .nav-links {
+    width: 50%;
+  }
+  .filter_btn {
+    margin-right: 20px;
   }
 }

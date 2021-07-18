@@ -2,7 +2,6 @@ import { products } from "../components/product";
 
 const productList = [...products];
 const makeFav = (array, id, type) => {
-  console.log("threee", array, id, type);
   let index = array.findIndex((e) => e.id === id);
   let temp = [...array];
   if (index >= 0) {

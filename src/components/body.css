@@ -68,9 +68,17 @@
 .fav_btn img:hover {
   opacity: 0.5;
 }
-@media only screen and (max-width: 1248px) {
-  .shoes_container {
-    justify-content: space-between;
+@media only screen and (max-width: 1254px) {
+  .shoes_details_container {
+    width: 29%;
+  }
+  .shoes_details img {
+    width: 99%;
+  }
+}
+@media only screen and (max-width: 1187px) {
+  .shoes_details_container {
+    width: 27%;
   }
 }
 @media only screen and (max-width: 850px) {
@@ -96,18 +104,18 @@
 @media only screen and (max-width: 600px) {
   .main-container {
     font-size: 12px;
-    width: 90%;
-    margin-left: 30px;
+    width: 100%;
+    margin-left: 10px;
   }
   .shoes_container {
-    width: 95%;
+    width: 100%;
   }
   .shoes_details_container {
-    width: 40%;
+    width: 28%;
   }
   .shoes_details img {
     width: 90% !important;
-    height: 150px !important;
+    height: 200px !important;
   }
   .shoes_desc {
     margin-left: 10px;
@@ -140,6 +148,14 @@
     height: 50px;
   }
 }
+@media only screen and (max-width: 479px) {
+  .shoes_details_container {
+    width: 42%;
+  }
+  .main-container {
+    margin-left: 5px;
+  }
+}
 @media only screen and (max-width: 300px) {
   .main-container {
     width: 100%;
@@ -147,5 +163,8 @@
   }
   .shoes_container {
     width: 100%;
+  }
+  .shoes_details_container {
+    width: 80%;
   }
 }

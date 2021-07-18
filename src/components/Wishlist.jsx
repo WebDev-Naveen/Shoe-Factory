@@ -11,9 +11,16 @@ function Wishlist() {
     <div className="wish_list_container">
       <div className="header_fav">Favourites</div>
       <div className="list_container">
-        {products.map((product) => {
-          return <Favourite key={product.id} product={product} />;
-        })}
+        {products.length === 0 ? (
+          <p>
+            There is no item in wishList , Go to home page and add Favourite
+            Items
+          </p>
+        ) : (
+          products.map((product) => {
+            return <Favourite key={product.id} product={product} />;
+          })
+        )}
       </div>
     </div>
   );

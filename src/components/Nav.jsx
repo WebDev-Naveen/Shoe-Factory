@@ -6,16 +6,24 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 function Nav() {
   const listVal = useSelector((state) => state.listreducer);
-  const isDesktopOrLaptop = useMediaQuery({
-    query: "(max-width: 600px)",
+  const wish = useSelector((state) => state.wishreducer);
+  const cart = useSelector((state) => state.reducer.cart);
+  const wishList = wish.filter((val) => {
+    return val.fav === true;
   });
-  let style = {};
-  if (isDesktopOrLaptop) {
-    style = { display: listVal ? "none" : "flex" };
-  }
-  console.log(isDesktopOrLaptop);
+  const cartlength = cart.length;
+  const wishlength = wishList.length;
+  // console.log(wish, cart, wishLength, "hello i nkniehhd");
+  // const isDesktopOrLaptop = useMediaQuery({
+  //   query: "(max-width: 600px)",
+  // });
+  // let style = {};
+  // if (isDesktopOrLaptop) {
+  //   style = { display: listVal ? "none" : "flex" };
+  // }
+  // console.log(isDesktopOrLaptop);
   return (
-    <nav className="nav-bar" style={style}>
+    <nav className="nav-bar">
       <div className="nav-links">
         <Link to="/register">
           <a href=""> Register </a>
@@ -27,27 +35,39 @@ function Nav() {
 
       <div className="nav-icons">
         <Link to="/wishlist">
-          <a href="#">
-            {" "}
-            <img
-              className="wishlist"
-              src={wishlist}
-              alt="wishlist"
-              width="35"
-              height="35"
-            />
-          </a>
+          <img
+            className="wishlist"
+            src={wishlist}
+            alt="wishlist"
+            width="34"
+            height="34"
+          />
+          <span
+            className="values"
+            style={{
+              visibility: wishlength > 0 && "visible",
+              left: " 32%",
+            }}
+          >
+            {wishlength > 0 && wishlength}
+          </span>
         </Link>
         <Link to="/addtocart">
-          <a href="#">
-            <img
-              className="cartIcon"
-              src={shoppingCart}
-              alt="shopping-cart"
-              width="26"
-              height="26"
-            />
-          </a>
+          <img
+            className="cartIcon"
+            src={shoppingCart}
+            alt="shopping-cart"
+            width="25"
+            height="25"
+          />
+          <span
+            className="values"
+            style={{
+              visibility: cartlength > 0 && "visible",
+            }}
+          >
+            {cartlength > 0 && cartlength}
+          </span>
         </Link>
       </div>
     </nav>

@@ -49,11 +49,12 @@ function Checkout() {
         <button className="paynow">Pay Now</button>
       </div>
       <div className="order_summary_container">
-        {cartItems &&
-          cartItems.map((item) => {
-            return <OrderSummary item={item} />;
-          })}
-
+        <div className="summary_container">
+          {cartItems &&
+            cartItems.map((item) => {
+              return <OrderSummary item={item} />;
+            })}
+        </div>
         <div className="coupen_code">
           <p>Apply Coupen Code</p>
           <div className="coupen_code_area">

@@ -112,15 +112,16 @@ label::after {
   .sidenav {
     width: 50%;
     /* display: none; */
+    height: 350px;
     position: fixed;
-    top: 235px;
+    top: 50px;
     left: 45.8%;
     padding-left: 10px;
     padding-right: 10px;
 
     padding-bottom: 10px;
     z-index: 1;
-    height: 300px;
+
     overflow: auto;
     border-bottom-left-radius: 5px;
   }
