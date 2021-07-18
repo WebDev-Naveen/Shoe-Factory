@@ -39,6 +39,13 @@ $fontFamliy: "Poppins", sans-serif;
       width: 50%;
     }
   }
+  @media only screen and(max-width: 600px) {
+    width: 80%;
+
+    form {
+      width: 30%;
+    }
+  }
 }
 .profile_container {
   display: flex;

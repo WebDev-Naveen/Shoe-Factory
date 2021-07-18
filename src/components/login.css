@@ -48,6 +48,15 @@
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .main-log-container {
+    width: 80%;
+  }
+  .main-log-container form {
+    width: 30%;
+  }
+}
+
 .profile_container {
   display: -webkit-box;
   display: -ms-flexbox;
