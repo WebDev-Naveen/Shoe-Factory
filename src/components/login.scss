@@ -4,7 +4,7 @@ $fontFamliy: "Poppins", sans-serif;
   width: 100%;
   height: 72.5vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 170px;
   form {
@@ -41,10 +41,6 @@ $fontFamliy: "Poppins", sans-serif;
   }
   @media only screen and(max-width: 600px) {
     width: 80%;
-
-    form {
-      width: 30%;
-    }
   }
 }
 .profile_container {

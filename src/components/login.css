@@ -5,9 +5,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -51,9 +51,6 @@
 @media only screen and (max-width: 600px) {
   .main-log-container {
     width: 80%;
-  }
-  .main-log-container form {
-    width: 30%;
   }
 }
 
