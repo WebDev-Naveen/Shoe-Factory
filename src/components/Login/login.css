@@ -1,0 +1,69 @@
+.main-log-container {
+  margin-top: 20px;
+  width: 100%;
+  height: 78vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 170px;
+}
+
+.main-log-container form {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 10px;
+  width: 30%;
+  height: 150px;
+}
+
+.main-log-container form input {
+  font-family: "Poppins", sans-serif;
+  height: 20px;
+  border: 1px solid #dddada;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.main-log-container form button {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: #217a70;
+  color: #fff;
+  border: 1px solid #dddada;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-log-container form {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main-log-container {
+    width: 80%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: 40px;
+  }
+}
+
+.profile_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=login.css.map */

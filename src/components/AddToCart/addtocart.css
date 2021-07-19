@@ -1,0 +1,122 @@
+/* * {
+  border: 1px solid black;
+} */
+.main_cart_container {
+  min-width: 80vw;
+  min-height: 86vh;
+  margin: auto;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: hsla(221, 45%, 73%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(221, 45%, 73%, 1) 0%,
+    hsla(220, 78%, 29%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(221, 45%, 73%, 1) 0%,
+    hsla(220, 78%, 29%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(221, 45%, 73%, 1) 0%,
+    hsla(220, 78%, 29%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9BAFD9", endColorstr="#103783", GradientType=1 );
+
+  border-radius: 10px 10px 10px 10px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cart_container {
+  background-color: #fff;
+  max-width: 550px;
+
+  margin: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid rgba(20, 20, 20, 0.3);
+  border-radius: 10px 10px 10px;
+}
+.cart_item_desc {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100px;
+}
+.header_cart {
+  width: 100%;
+  height: 30px;
+  padding-top: 10px;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 16px;
+  letter-spacing: 2px;
+
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+.item {
+  opacity: 0.5;
+}
+.name {
+  opacity: 1;
+}
+.cart_item_quantity {
+  padding-top: 30px;
+  padding-right: 3px;
+}
+.total_amount {
+  padding-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid rgba(248, 246, 246, 0.3);
+}
+.qnt_btn {
+  background-color: rgba(71, 179, 125, 0.3);
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.qnt_btn:hover {
+  background-color: rgb(4, 5, 5);
+  color: #fff;
+}
+.quantity_val {
+  padding: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .main_cart_container {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main_cart_container {
+    width: 100%;
+    min-height: 620px;
+  }
+  .cart_container {
+    width: 100%;
+  }
+  .cart_item_desc {
+    width: 80px;
+  }
+}

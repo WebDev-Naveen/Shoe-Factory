@@ -6,15 +6,15 @@ import {
   useLocation,
 } from "react-router-dom";
 import queryString from "query-string";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
-import Login from "./components/Login";
-import Register from "./components/Register";
-import Wishlist from "./components/Wishlist";
-import AddToCart from "./components/AddToCart";
+import Header from "./components/Header/Index";
+import Main from "./components/MainContainer/Index";
+import Footer from "./components/Footer/Index";
+import Login from "./components/Login/Index";
+import Register from "./components/Register/Index";
+import Wishlist from "./components/Favourite/Index";
+import AddToCart from "./components/AddToCart/Index";
 
-import Checkout from "./components/Checkout";
+import Checkout from "./components/CheckOut/Index";
 function App(props) {
   console.log(props);
   return (

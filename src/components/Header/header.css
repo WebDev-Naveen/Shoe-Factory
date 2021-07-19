@@ -1,0 +1,176 @@
+.header {
+  background-color: #ffffff;
+  width: 100vw;
+  padding-top: 10px;
+  display: flex;
+  box-sizing: border-box;
+  text-align: center;
+  height: 60px;
+  border-bottom: 0.3px solid rgba(40, 43, 46, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+.logo {
+  cursor: pointer;
+  height: 50px;
+}
+
+.logo img {
+  padding-left: 30px;
+  position: relative;
+  top: 5px;
+}
+.logo span {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  padding-left: 15px;
+  cursor: pointer;
+}
+.nav-bar {
+  padding-left: 100px;
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
+a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgb(17, 17, 17);
+}
+a:hover {
+  opacity: 0.5;
+}
+.nav-links {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav-links a {
+  margin-top: 0;
+}
+.nav-icons {
+  position: relative;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-icons img {
+  margin-top: -5px;
+}
+.filter_btn {
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  margin-top: -5px;
+  display: none;
+}
+.values {
+  position: absolute;
+  width: 20px;
+
+  bottom: 35px;
+  height: 18px;
+
+  border-radius: 9px;
+  background-color: black;
+
+  color: white;
+  font-size: 10px;
+  padding-bottom: 3px;
+  visibility: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .nav-bar {
+    padding-left: 50px;
+    justify-content: space-around;
+  }
+  .nav-links {
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .logo {
+    width: 100%;
+    font-size: 24px;
+  }
+  .nav-bar {
+    padding-left: 30px;
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .header {
+    justify-content: space-around;
+    width: 100vw;
+  }
+  .logo {
+    width: 100%;
+  }
+
+  .logo span {
+    font-size: 12px;
+  }
+
+  .nav-icons img {
+    margin-top: 0px;
+    width: 26px;
+    height: 26px;
+  }
+
+  .nav-bar a {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .nav-bar {
+    width: 60%;
+    padding-left: 0;
+    background-color: #fff;
+  }
+  .logo img {
+    padding-left: 15px;
+  }
+  .logo span {
+    padding-left: 5px;
+  }
+
+  .filter_btn {
+    display: block !important;
+    /* width: 20px; */
+    width: 10%;
+
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .header {
+    justify-content: space-evenly;
+    width: 100vw;
+  }
+  .logo span {
+    display: none;
+  }
+  .logo img {
+    padding-top: 5px;
+
+    padding-left: 0;
+    width: 40px;
+    height: 30px;
+  }
+  .logo {
+    padding-left: 15px;
+  }
+  .nav-bar {
+    width: 70%;
+  }
+  .nav-links {
+    width: 50%;
+  }
+  .filter_btn {
+    margin-right: 20px;
+  }
+}
