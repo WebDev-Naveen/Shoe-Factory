@@ -8,13 +8,15 @@ function AddToCart() {
   const cartItems = useSelector((state) => state.reducer.cart);
   console.log(cartItems);
   let total = 0;
-  cartItems.map((cartItem) => {
+  cartItems.forEach((cartItem) => {
+    console.log(cartItem);
     let price = cartItem.price.split("$");
     price = Number(price[1]);
     total += price * cartItem.qty;
     return total;
   });
 
+  console.log(total);
   return (
     <div className="main_cart_container">
       <div className="header_cart">AddToCart</div>
