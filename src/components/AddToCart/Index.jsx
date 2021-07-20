@@ -13,7 +13,6 @@ function AddToCart() {
     let price = cartItem.price.split("$");
     price = Number(price[1]);
     total += price * cartItem.qty;
-    return total;
   });
 
   console.log(total);
